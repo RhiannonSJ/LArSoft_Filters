@@ -1,0 +1,12 @@
+BEGIN_PROLOG
+
+hitFilter:
+{ 
+    module_type:                "HitFilter"
+    
+    MinHitAssociations: 100.
+
+}
+
+END_PROLOG
+
