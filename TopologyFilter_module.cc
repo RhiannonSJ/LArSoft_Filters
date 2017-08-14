@@ -77,6 +77,7 @@ bool cczeropi::TopologyFilter::filter(art::Event & e)
   // Loop over everything and check it's working  
   // Show the chosen topology to filter on
   std::cout << "Filtering out topology:" << std::endl;
+  
   for ( topology_map::iterator it = m_selection.begin(); it != m_selection.end(); ++it ) {
     std::vector< int > pdgVect = it->first;
     int                count   = it->second;
@@ -151,18 +152,14 @@ bool cczeropi::TopologyFilter::filter(art::Event & e)
 
           }
 
-          return false;
+          return true;
 
         }
       }
-      
-      std::cout << " Passed " << std::endl;
-      std::cout << "nuVtxX=" << nuVtxX << " , nuVtxY = " << nuVtxY << " , nuVtxZ = " << nuVtxZ << std::endl;
-
     }
   }
 
-  return true;
+  return false;
 
 }
 void cczeropi::TopologyFilter::reconfigure(fhicl::ParameterSet const & p) 

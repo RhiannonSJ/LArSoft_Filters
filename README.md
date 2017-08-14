@@ -1,2 +1,4 @@
-# LArSoft_Work
-All sorts of LArSoft-based crap
+# LArSoft_Filters
+Topology filter for generating CC 0pi events
+
+Hit filter for refining the generated sample

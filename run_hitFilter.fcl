@@ -42,7 +42,7 @@ physics: {
 outputs: {
     out0: { module_type: RootOutput
             fileName: "%ifb_hitFilteredEvents_%p-%tc.root"
-            #SelectEvents: { SelectEvents: [ path0 ] }
+            dataTier: "hitfilter"
             SelectEvents: [ path0 ]
             compressionLevel: 1
           }
